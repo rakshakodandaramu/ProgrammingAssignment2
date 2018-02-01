@@ -2,7 +2,9 @@
 
 
 ## create matrix for cache
-
+## step one to to set function for cache
+## othe steps include to get x where it use lexical scoping and set to assign arguments
+## get inverse is to inverse the matrix and set the inversed matrix
 makeCacheMatrix <- function(x = matrix())
 {
  T<-NULL
@@ -22,7 +24,7 @@ makeCacheMatrix <- function(x = matrix())
 }
 
 
-##Inverse coomputing function
+##cache will be checked if avaliable , if its null then cumpute else get from cache
 
 cacheSolve <- function(x, ...)
   {
