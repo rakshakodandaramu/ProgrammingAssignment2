@@ -1,4 +1,4 @@
-####Loading Data
+#Loading Data
 
 
 
@@ -18,7 +18,7 @@ inTrain <- createDataPartition(y=training$classe, p=0.75, list=FALSE)
  testing <- training[-inTrain,]
 
 
-#### preprocessing data
+## preprocessing data
 
 
  preObj <- preProcess(training[,-length(training)],method=c("center", "scale", "knnImpute"), thresh=0.9)
