@@ -23,3 +23,11 @@ inTrain <- createDataPartition(y=training$classe, p=0.75, list=FALSE)
 
  preObj <- preProcess(training[,-length(training)],method=c("center", "scale", "knnImpute"), thresh=0.9)
  clean_data <- predict(preObj,training[,-length(training)])
+ 
+ 
+ #Loading Data
+
+
+
+we have deleted thoe coloumns with NA (nothing) and few more coloumns which not related to predict
+split data to training and testing
