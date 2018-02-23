@@ -1,7 +1,4 @@
-####Loading Data
-
-
-we have deleted thoe coloumns with NA (nothing) and few more coloumns which not related to predict
+####Loading Datawe have deleted thoe coloumns with NA (nothing) and few more coloumns which not related to predict
 split data to training and testing
 
 
@@ -20,5 +17,5 @@ inTrain <- createDataPartition(y=training$classe, p=0.75, list=FALSE)
 #### preprocessing data
 
 
- preObj <- preProcess(training[,-length(training)],method=c("center", "scale", "knnImpute", "pca"), thresh=0.9)
+ preObj <- preProcess(training[,-length(training)],method=c("center", "scale", "knnImpute"), thresh=0.9)
  clean_data <- predict(preObj,training[,-length(training)])
