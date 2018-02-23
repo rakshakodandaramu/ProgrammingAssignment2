@@ -1,3 +1,7 @@
+
+### preprocessing data
+preObj <- preProcess(training[,-length(training)],method=c("center", "scale", "knnImpute"), thresh=0.9)
+clean_data <- predict(preObj,training[,-length(training)])
 #Loading Data
 ###we have deleted thoe coloumns with NA (nothing) and few more coloumns which not related to predict split data to training and testing
 library(caret)
@@ -8,6 +12,3 @@ training <- training[,-nearZeroVar(training)]> training <- training[,-c(1,2,3,4,
 inTrain <- createDataPartition(y=training$classe, p=0.75, list=FALSE)
 training <- training[inTrain,]
 testing <- training[-inTrain,]
-### preprocessing data
-preObj <- preProcess(training[,-length(training)],method=c("center", "scale", "knnImpute"), thresh=0.9)
-clean_data <- predict(preObj,training[,-length(training)])
