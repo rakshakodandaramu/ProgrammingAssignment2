@@ -1,4 +1,8 @@
-####Loading Datawe have deleted thoe coloumns with NA (nothing) and few more coloumns which not related to predict
+####Loading Data
+
+
+
+we have deleted thoe coloumns with NA (nothing) and few more coloumns which not related to predict
 split data to training and testing
 
 
